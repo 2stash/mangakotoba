@@ -1,23 +1,20 @@
 import "./App.css";
 import STORE from "./STORE";
-import React, { useState, Component } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Book from './components/Book';
+import BookContext from './context/bookcontext/bookContext';
 
-class App extends Component {
+const App = () => {
+const bookContext = useContext(BookContext);
+const {setInitialState} = bookContext;
 
-  state = {
-    books:STORE
-  }
+useEffect(() => {
+  setInitialState(STORE)
+},[])
 
-  
-
-
-  render() {
-    return (
-    <div className='App'>
-      {console.log(this.state.books.books[0])}
-    </div>)
-  }
+  return (
+    <Book />
+  )
 }
 
 export default App;

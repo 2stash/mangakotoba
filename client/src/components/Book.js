@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import scheduleContext from '../context/bookcontext/bookContext';
+import BookContext from '../context/bookcontext/bookContext';
 
-function Book() {
+const Book = () => {
+  const bookContext = useContext(BookContext);
+  const {books} = bookContext;
+
+  console.log(books)
   return (
     <div>
       
