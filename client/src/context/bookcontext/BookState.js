@@ -12,8 +12,8 @@ const BookState = props => {
 
   const [state, dispatch] = useReducer(BookReducer, initialState);
   
-  const setInitialState = (value) => {
-    dispatch({type: SET_STATE, payload:{value}})
+  const setInitialState = (data) => {
+    dispatch({type: SET_STATE, payload:data})
   }
 
   return <BookContext.Provider 
