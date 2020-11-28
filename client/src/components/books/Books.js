@@ -32,7 +32,7 @@ const Books = () => {
         {books ?
           books.booklist.map((title) => (
               <div key={title} className="books-image">
-                <Link to={{pathname: `/book/${title}`}}><img src={books.books[title].image} alt='Naruto' /></Link>
+                <Link to={{pathname: `/book/${title}`}}><img src={books.books[title][1].image} alt='One Piece' /></Link>
               </div>
             )
           ) : <p>null!</p>}

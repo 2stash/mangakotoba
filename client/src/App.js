@@ -4,10 +4,11 @@ import React, { Fragment, useEffect, useContext } from "react";
 
 import BookContext from "./context/bookcontext/bookContext";
 import Navbar from "./components/nav/Navbar";
-import Home from "./components/Home/Home";
+import Home from "./components/home/Home";
 import Book from "./components/book/Book";
 import Books from "./components/books/Books";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import CsvConverter from "./components/home/CsvConverter";
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
           <Route exact path='/' component={Home} />
           <Route exact path="/books" component={Books} />
           <Route path="/book/:bookTitle" component={Book}/>
+          <Route exact path="/convert" component={CsvConverter} />
         </Switch>
       </div>
       </Router>
