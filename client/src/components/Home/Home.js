@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 import naruto from "../../images/naruto.jpg";
 import bleach from "../../images/bleach.jpg";
 import gintama from "../../images/gintama.jpg";
@@ -10,10 +11,11 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-text">
-        <p>Stop wasting time looking up words and start reading</p>
-        <p>MangaKotoba has premade wordlist so you can focus on reading Japanese!</p>
+        <h1>Use Our Custom Wordlists to Start Reading Manga in Japanese Now!</h1>
+        <Link to='/books'><button className="btn">Search the Booklist</button></Link>
+
       </div>
-      <div className="home-images">
+      {/* <div className="home-images">
 
       <div className='home-image'>
             <img src={naruto} alt="naruto" />
@@ -26,7 +28,7 @@ const Home = () => {
         </div>
         <div className='home-image'>
           <img src={gintama} alt='gintama' />
-        </div>
+        </div> */}
         {/* <div className='home-image'>
           <img src={onepiece} alt='one piece' />
         </div>
@@ -34,7 +36,7 @@ const Home = () => {
           <img src={onepunchman} alt='one punch man' />
         </div> */}
 
-      </div>
+      {/* </div> */}
 
 
     </div>

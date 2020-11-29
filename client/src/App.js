@@ -7,6 +7,7 @@ import Navbar from "./components/nav/Navbar";
 import Home from "./components/home/Home";
 import Book from "./components/book/Book";
 import Books from "./components/books/Books";
+import BookList from "./components/book/BookList";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CsvConverter from "./components/home/CsvConverter";
 
@@ -28,7 +29,8 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path="/books" component={Books} />
-          <Route path="/book/:bookTitle" component={Book}/>
+          <Route path="/booklist/:seriesTitle/:bookTitle" component={Book}/>
+          <Route path="/booklist/:seriesTitle" component={BookList}/>
           <Route exact path="/convert" component={CsvConverter} />
         </Switch>
       </div>

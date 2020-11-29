@@ -6,9 +6,11 @@ import onepiece from "./images/one-piece-colored.jpg";
 import dragonball from "./images/dragon-ball.jpg";
 
 const STORE = {
-  booklist: ["onePieceOne"],
+  booklist: ["one-piece"],
+  "one-piece": { list: ["one-piece-1"], image: onepiece },
+  nameconversion: { "one-piece": "One Piece"},
   books: {
-    onePieceOne: {
+    "one-piece-1": {
       1: {
         image: onepiece,
         pages: {
@@ -113,7 +115,6 @@ const STORE = {
           },
           8: {
             vocab: [
-              ,
               {
                 page: "8",
                 kanji: "停泊",
@@ -136,7 +137,6 @@ const STORE = {
           },
           9: {
             vocab: [
-              ,
               {
                 page: "9",
                 kanji: "なんかじゃない",
@@ -153,7 +153,6 @@ const STORE = {
           },
           10: {
             vocab: [
-              ,
               {
                 page: "10",
                 kanji: "根性",
@@ -998,7 +997,6 @@ const STORE = {
           },
           117: {
             vocab: [
-              ,
               {
                 page: "117",
                 kanji: "待ち望む",
@@ -1108,7 +1106,6 @@ const STORE = {
           },
           137: {
             vocab: [
-              ,
               {
                 page: "137",
                 kanji: "悔しい",

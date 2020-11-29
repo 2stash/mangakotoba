@@ -4,7 +4,14 @@
   --dark-color: #1D3557;
   --danger-color: #E63946;
   --success-color: #06d6a0;
-  --background-color: #F1FAEE;
+  --background-color: #f5f5f5;
+
+  /* Card colors */
+  --card-header: #0d0d0d;
+  --card-text: #404040;
+  --card-btn-text: #3363ff;
+  --card-btn-bg: #e6ecff;
+
 }
 
 
@@ -15,12 +22,28 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--background-color);
 }
 
 .container {
   width: 1400px;
   margin:auto;
 }
+
+.btn {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+
 /* nav styles Start */
 nav {
   display: flex;
@@ -55,7 +78,16 @@ nav a {
 
 
 /* Home Styles Start */
-.home-container {
+.home-text{
+  width:600px;
+  height: 200px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.home-container,
+.home-text
+ {
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -80,6 +112,30 @@ img {
   height: 400px;
 }
 /* Home Styles End */
+
+/* Books Styles Start */
+.books-container,
+.books-display,
+.books-display-image
+ {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.books-display {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, .1);
+}
+
+.books-display:hover {
+  transform: translateY(-.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, .2);
+}
+
+/* Books Styles End */
+
 
 /* Book Styles Start */
 .books-image

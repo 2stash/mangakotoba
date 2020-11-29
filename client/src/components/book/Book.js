@@ -6,6 +6,7 @@ const Book = ({ match }) => {
   const bookContext = useContext(BookContext);
   const { books, setCurrentReadings } = bookContext;
   const bookTitle = match.params.bookTitle;
+  console.log(match.params)
   const [page, setPage] = useState(1);
   const pageTwo = page + 1;
 

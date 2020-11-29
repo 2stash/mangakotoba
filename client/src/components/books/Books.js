@@ -12,15 +12,10 @@ const Books = () => {
     setSearch(e.target.value);
   };
 
-  // let image;
-  // if(books){
-  //   image = books.books.naruto.image
-  //   // image = books.image;
-  //   console.log(image)
-  // }
-  // const narutoimage = books.image;
+
   return (
-    <div>
+    <div className="books-container">
+    <div className="books-search">
       <input
         type='text'
         onChange={handleSearch}
@@ -28,11 +23,13 @@ const Books = () => {
         placeholder='Search Book Title'
       />
       <p>{search}</p>
-      <div>
+      </div>
+      <div className="books-display">
         {books ?
           books.booklist.map((title) => (
-              <div key={title} className="books-image">
-                <Link to={{pathname: `/book/${title}`}}><img src={books.books[title][1].image} alt='One Piece' /></Link>
+              <div key={title} className="books-display-image">
+                <Link to={{pathname: `/booklist/${title}`}}><img src={books[title].image} alt='One Piece' /></Link>
+                <h4>{books.nameconversion[title]}</h4>
               </div>
             )
           ) : <p>null!</p>}
