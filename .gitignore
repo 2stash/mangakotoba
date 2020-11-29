@@ -3,3 +3,4 @@ config/default.*
 csvConverter.js
 csvConverter.html
 csv
+.env
