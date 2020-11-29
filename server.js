@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const connectDB = require('./config/db');
-// const path = require('path');
+const path = require('path');
 connectDB();
 require('dotenv').config();
 
@@ -15,13 +15,12 @@ app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/dataentry', require('./routes/api/dataentry'))
 
 if(process.env.NODE_ENV === 'production'){
-  app.use(express.static('client/build'));
-
+  app.use(express.static('client/ build'));
+  // app.use(express.static(path.join(__dirname, 'build')));
   app.get('*', (req,res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    // res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   })
 }
 
 const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, ()=> console.log(`Server running on port: ${PORT}`));
