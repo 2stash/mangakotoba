@@ -1,7 +1,7 @@
 {
   "name": "mangakotoba",
   "version": "1.0.0",
-  "description": "",
+  "description": "Wordlist for Japanese Manga",
   "main": "index.js",
   "scripts": {
     "start": "node server",

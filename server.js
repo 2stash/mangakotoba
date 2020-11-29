@@ -3,6 +3,7 @@ const app = express();
 const connectDB = require('./config/db');
 const path = require('path');
 connectDB();
+require('dotenv').config();
 
 // Init Middleware
 app.use(express.json({extended: false}))
