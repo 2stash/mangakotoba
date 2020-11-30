@@ -26,7 +26,8 @@ body {
 }
 
 .container {
-  width: 1400px;
+  /* width:100%; */
+  max-width: 1400px;
   margin:auto;
 }
 
@@ -79,7 +80,7 @@ nav a {
 
 /* Home Styles Start */
 .home-text{
-  width:600px;
+  max-width:600px;
   height: 200px;
   margin-bottom: 40px;
   text-align: center;
@@ -160,6 +161,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 90%;
 }
 
 /* Book Styles End */
@@ -184,7 +186,24 @@ tbody tr:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
+  max-width: 600px;
   min-height: 600px;
 }
 /* Page Styes End */
+
+
+@media screen and (max-width: 480px ){
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .book-page-container {
+    flex-direction: column;
+  }
+
+  .page-container {
+    min-height: 100px;
+  }
+
+}
