@@ -26,20 +26,24 @@ const Book = ({ match }) => {
   }
 
   return (
-    <div>
-      <div>
+    <div className="flex-column">
+      <div className="book-page-container">
+        <div className="page-container">
         <Page
           pageNumber={page}
           bookTitle={bookTitle}
           key={bookTitle + `${page}`}
         />
+        </div>
+        <div className="page-container">
         <Page
           pageNumber={pageTwo}
           bookTitle={bookTitle}
           key={bookTitle + `${pageTwo}`}
         />
+        </div>
       </div>
-      <div>
+      <div className="page-turner">
         <button onClick={handlePrevPage}><i className="fas fa-arrow-left"></i> Prev</button>
         <span>Page {page} - {pageTwo}</span>
         <button onClick={handleNextPage}><i className="fas fa-arrow-right"></i> Prev</button>

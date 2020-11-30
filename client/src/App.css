@@ -138,12 +138,53 @@ img {
 
 
 /* Book Styles Start */
-.books-image
-{
+.flex-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.books-image {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: center;
 }
 
+.page-turner button {
+  margin: 10px;
+  padding: 8px;
+}
+
+.book-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Book Styles End */
+
+/* Page Styles Start */
+table {
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+tbody tr:nth-child(odd) {
+  background: #eee;
+}
+tbody tr:hover {
+  background: var(--card-btn-bg)
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  min-height: 600px;
+}
+/* Page Styes End */

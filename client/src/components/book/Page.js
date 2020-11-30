@@ -7,11 +7,10 @@ const Page = (props) => {
   const { pageNumber, bookTitle } = props;
 
   if (books && !books.books[bookTitle][1].pages[pageNumber]) {
-    return "no vocab for this page";
+    return <p>No Vocab for this Page</p>
   }
   return (
     <div>
-      <p>Get Reading</p>
       <table>
       <thead>
         <tr>
