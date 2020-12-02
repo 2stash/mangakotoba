@@ -126,8 +126,16 @@ img {
 
 }
 
+.books-flex-col {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .books-display {
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, .1);
+  margin: 10px;
 }
 
 .books-display:hover {
@@ -184,6 +192,7 @@ tbody tr:hover {
 
 .page-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 600px;

@@ -15,6 +15,7 @@ const Books = () => {
 
   return (
     <div className="books-container">
+    <h2>Choose a Series</h2>
     <div className="books-search">
       <input
         type='text'
@@ -24,10 +25,10 @@ const Books = () => {
       />
       <p>{search}</p>
       </div>
-      <div className="books-display">
+      <div className="books-display-image">
         {books ?
           books.booklist.map((title) => (
-              <div key={title} className="books-display-image">
+              <div key={title} className="books-display">
                 <Link to={{pathname: `/booklist/${title}`}}><img src={books[title].image} alt='One Piece' /></Link>
                 <h4>{books.nameconversion[title]}</h4>
               </div>

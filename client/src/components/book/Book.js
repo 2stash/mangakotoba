@@ -28,6 +28,7 @@ const Book = ({ match }) => {
     <div className="flex-column">
       <div className="book-page-container">
         <div className="page-container">
+        <h4>{bookTitle}</h4>
         <Page
           // pageNumber={page}
           bookTitle={bookTitle}
