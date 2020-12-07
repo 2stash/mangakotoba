@@ -16,9 +16,9 @@ const BookList = ({ match }) => {
           
           <div key={title} className="books-display-image books-display">
             <Link to={{ pathname: `/booklist/${seriesTitle}/${title}`, title:{title} }}>
-              <img src={books.books[title][1].image} alt='One Piece' />
+              <img src={books.books[title][1].image} alt='book cover' />
             </Link>
-            <h4>One Piece {index+1}</h4>
+            <h4>{title}</h4>
           </div>
         ))
       ) : (

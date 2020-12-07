@@ -8,15 +8,14 @@ const Books = () => {
   const bookContext = useContext(BookContext);
   const { books } = bookContext;
 
-  const handleSearch = (e) => {
-    setSearch(e.target.value);
-  };
-
+  // const handleSearch = (e) => {
+  //   setSearch(e.target.value);
+  // };
 
   return (
     <div className="books-container">
     <h2>Choose a Series</h2>
-    <div className="books-search">
+    {/* <div className="books-search">
       <input
         type='text'
         onChange={handleSearch}
@@ -24,12 +23,12 @@ const Books = () => {
         placeholder='Search Book Title'
       />
       <p>{search}</p>
-      </div>
+      </div> */}
       <div className="books-display-image">
         {books ?
           books.booklist.map((title) => (
               <div key={title} className="books-display">
-                <Link to={{pathname: `/booklist/${title}`}}><img src={books[title].image} alt='One Piece' /></Link>
+                <Link to={{pathname: `/booklist/${title}`}}><img src={books[title].image} alt='book cover' /></Link>
                 <h4>{books.nameconversion[title]}</h4>
               </div>
             )
